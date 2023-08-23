@@ -11,6 +11,7 @@ import { Text } from "./components/Text";
 import { Image } from "./components/Image";
 import { Divider } from "./components/Divider";
 import { SettingsPanel } from "./components/SettingsPanel";
+import { HtmlEmbed } from "./components/HtmlEmbed";
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
           CardBottom,
           Image,
           Divider,
+          HtmlEmbed,
         }}
       >
         <Grid container spacing={3}>
