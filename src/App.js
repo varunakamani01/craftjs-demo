@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+// pages/index.js
 
-function App() {
+import React from "react";
+import { Typography, Paper, Grid } from "@mui/material";
+import { Container } from "./components/Container";
+import { Toolbox } from "./components/ToolBox";
+import { Card, CardTop, CardBottom } from "./components/Card";
+import { Button } from "./components/Button";
+import { Editor, Element, Frame } from "@craftjs/core";
+import { Text } from "./components/Text";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Typography variant="h5" align="center">
+        A super simple page editor
+      </Typography>
+      <Editor resolver={{ Card, Button, Text, Container, CardTop, CardBottom }}>
+        <Grid container spacing={3}>
+          <Grid item xs>
+            <Frame>
+              <Element is={Container} padding={5} background="#eee" canvas>
+                <Card />
+                <Button size="small" variant="outlined">
+                  Click
+                </Button>
+                <Text size="small" text="Hi world!" />
+                <Element is={Container} padding={6} background="#999" canvas>
+                  <Text size="small" text="It's me again!" />
+                </Element>
+              </Element>
+            </Frame>
+          </Grid>
+          <Grid item xs={3}>
+            <Paper>
+              <Toolbox />
+              {/* <SettingsPanel /> */}
+            </Paper>
+          </Grid>
+        </Grid>
+      </Editor>
     </div>
   );
 }
-
-export default App;
