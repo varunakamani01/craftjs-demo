@@ -9,6 +9,7 @@ import { Button } from "./components/Button";
 import { Editor, Element, Frame } from "@craftjs/core";
 import { Text } from "./components/Text";
 import { Image } from "./components/Image";
+import { Divider } from "./components/Divider";
 
 export default function App() {
   return (
@@ -17,7 +18,16 @@ export default function App() {
         A super simple page editor
       </Typography>
       <Editor
-        resolver={{ Card, Button, Text, Container, CardTop, CardBottom, Image }}
+        resolver={{
+          Card,
+          Button,
+          Text,
+          Container,
+          CardTop,
+          CardBottom,
+          Image,
+          Divider,
+        }}
       >
         <Grid container spacing={3}>
           <Grid item xs>
