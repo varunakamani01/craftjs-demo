@@ -8,6 +8,7 @@ import { Card, CardTop, CardBottom } from "./components/Card";
 import { Button } from "./components/Button";
 import { Editor, Element, Frame } from "@craftjs/core";
 import { Text } from "./components/Text";
+import { Image } from "./components/Image";
 
 export default function App() {
   return (
@@ -15,7 +16,9 @@ export default function App() {
       <Typography variant="h5" align="center">
         A super simple page editor
       </Typography>
-      <Editor resolver={{ Card, Button, Text, Container, CardTop, CardBottom }}>
+      <Editor
+        resolver={{ Card, Button, Text, Container, CardTop, CardBottom, Image }}
+      >
         <Grid container spacing={3}>
           <Grid item xs>
             <Frame>
