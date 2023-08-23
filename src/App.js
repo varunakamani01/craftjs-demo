@@ -10,6 +10,7 @@ import { Editor, Element, Frame } from "@craftjs/core";
 import { Text } from "./components/Text";
 import { Image } from "./components/Image";
 import { Divider } from "./components/Divider";
+import { SettingsPanel } from "./components/SettingsPanel";
 
 export default function App() {
   return (
@@ -47,7 +48,7 @@ export default function App() {
           <Grid item xs={3}>
             <Paper>
               <Toolbox />
-              {/* <SettingsPanel /> */}
+              <SettingsPanel />
             </Paper>
           </Grid>
         </Grid>
